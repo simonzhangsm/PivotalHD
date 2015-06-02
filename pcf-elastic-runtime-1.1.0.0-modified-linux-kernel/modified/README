@@ -1,0 +1,6 @@
+We modified the kernel by cherry-picking the following commit onto the ubuntu 10.04 "original-linux-lts-backport-oneiric-3.0.0" package:
+http://git.kernel.org/cgit/linux/kernel/git/torvalds/linux.git/commit/?id=8176cced706b5e5d15887584150764894e94e02f
+
+The change was only 3 characters, replacing an INT with a U64 datatype to prevent overflow.
+
+This modification patched a critical kernel vulnerability described in CVE-2013-2094.  We then built the patched kernel using normal kernel build scripts, and distributed it with our product.
